@@ -1,0 +1,21 @@
+/*
+    Global Settings
+--------------------------------*/
+
+/* Colors */
+$color-dark-blue: hsl(203, 98, 21);
+$color-light-blue: hsl(203, 77, 42);
+$color-teal: hsl(159, 93, 58);
+$color-orange: hsl(21, 85, 56);
+$color-dark-gray: hsl(210, 1, 33);
+$color-light-gray: hsl(0, 0, 97);
+$color-white: hsl(0, 0, 100);
+
+/* Typography */
+$font-family-primary: 'Public Sans', sans-serif;
+$font-weight-normal: 300;
+$font-weight-bold: 400;
+$font-weight-extra-bold: 600;
+
+/* Media Query */
+$desktop-width: 992px;

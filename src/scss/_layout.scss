@@ -1,0 +1,128 @@
+/*
+    Layout
+-----------------------------------------*/
+.header-section {
+    @include layout-properties(1);
+}
+
+.hero-section {
+    @include layout-properties(2);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 50vw);
+        background-image: url(https://cdn2.hubspot.net/hubfs/359995/Landing%20Pages/ppc/vilt/hero-section-bg-img-mb-02-comp.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: calc(100% - 30%) 0;
+        z-index: -9999;
+    }
+    &::after {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 50vw);
+        background-color: hsla(203, 98, 21, 0.8);
+        z-index: -8888;
+    }
+    .hubspot-simple-form {
+        display: none;
+    }
+}
+
+.mobile-form-section {
+    @include layout-properties(2);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 50vw);
+        background-color: $color-light-blue;
+        z-index: -9999;
+    }
+}
+
+.stats-section {
+    @include layout-properties(2);
+}
+
+.benefits-section {
+    @include layout-properties(2);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 50vw);
+        background-color: $color-light-gray;
+        z-index: -9999;
+    }
+}
+
+.details-section {
+    @include layout-properties(2);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 50vw);
+        background-color: $color-light-blue;
+        z-index: -9999;
+    }
+}
+
+.awards-section {
+    @include layout-properties(2);
+}
+
+.client-section {
+    @include layout-properties(2);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 50vw);
+        background-color: $color-light-gray;
+        z-index: -9999;
+    }
+}
+
+.contact-section {
+    @include layout-properties(2);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 50vw);
+        background-color: $color-light-blue;
+        z-index: -9999;
+    }
+}
+
+.footer-section {
+    @include layout-properties(1);
+    &::before {
+        content: '';
+        width: 100vw;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: calc(50% - 50vw);
+        background-color: $color-light-gray;
+        z-index: -9999;
+    }
+}
