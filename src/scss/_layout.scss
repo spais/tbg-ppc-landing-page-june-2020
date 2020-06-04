@@ -3,10 +3,19 @@
 -----------------------------------------*/
 .header-section {
     @include layout-properties(1);
+    @media (min-width: $desktop-width) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .hero-section {
     @include layout-properties(2);
+    @media (min-width: $desktop-width) {
+        display: flex;
+        align-items: center;
+        padding-bottom: 8.4rem;
+    }
     &::before {
         content: '';
         width: 100vw;
@@ -19,6 +28,10 @@
         background-size: cover;
         background-position: calc(100% - 30%) 0;
         z-index: -9999;
+        @media (min-width: $desktop-width) {
+            background-image: url(https://cdn2.hubspot.net/hubfs/359995/Landing%20Pages/ppc/vilt/hero-section-bg-img-01-comp.jpg);
+            background-position: 0 calc(100% - 40%);
+        }
     }
     &::after {
         content: '';
@@ -32,11 +45,17 @@
     }
     .hubspot-simple-form {
         display: none;
+        @media (min-width: $desktop-width) {
+            display: block;
+        }
     }
 }
 
 .mobile-form-section {
     @include layout-properties(2);
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
     &::before {
         content: '';
         width: 100vw;
@@ -55,6 +74,10 @@
 
 .benefits-section {
     @include layout-properties(2);
+    @media (min-width: $desktop-width) {
+        @include layout-properties(3); 
+        padding-top: 9.6rem;;   
+    }
     &::before {
         content: '';
         width: 100vw;
@@ -69,6 +92,9 @@
 
 .details-section {
     @include layout-properties(2);
+    @media (min-width: $desktop-width) {
+        @include layout-properties(3);    
+    }
     &::before {
         content: '';
         width: 100vw;
@@ -83,10 +109,16 @@
 
 .awards-section {
     @include layout-properties(2);
+    @media (min-width: $desktop-width) {
+        @include layout-properties(3);    
+    }
 }
 
 .client-section {
     @include layout-properties(2);
+    @media (min-width: $desktop-width) {
+        @include layout-properties(3);    
+    }
     &::before {
         content: '';
         width: 100vw;
@@ -101,6 +133,10 @@
 
 .contact-section {
     @include layout-properties(2);
+    @media (min-width: $desktop-width) {
+        display: flex;
+        @include layout-properties(0);
+    }
     &::before {
         content: '';
         width: 100vw;
@@ -113,6 +149,7 @@
     }
 }
 
+/* Footer */
 .footer-section {
     @include layout-properties(1);
     &::before {
@@ -126,3 +163,4 @@
         z-index: -9999;
     }
 }
+

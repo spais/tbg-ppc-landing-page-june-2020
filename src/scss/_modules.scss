@@ -8,18 +8,32 @@
         font-weight: $font-weight-bold;
         color: $color-dark-blue;
         text-align: center;
+        @media (min-width: $desktop-width) {
+            font-size: 2.8rem;    
+        }
     }
 }
 
 /* Header */
 .branding {
     &__logo {
+        @media (min-width: $desktop-width) {
+            display: block;
+            width: 350px;
+        }
         &-img {
             display: block;
             width: 90%;
+            max-width: 400px;
             height: auto;
             margin: 0 auto;
+            @media (min-width: $desktop-width) {
+                width: 100%;
+            }
         }
+    }
+    @media (min-width: $desktop-width) {
+        width: 50%;
     }
 }
 
@@ -28,6 +42,13 @@
     flex-direction: column;
     margin-top: 1.2rem;
     text-align: center;
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 50%;
+        margin: 0;
+    }
     &__pos {
         display: flex;
         align-items: center;
@@ -42,6 +63,9 @@
         font-size: 1.6rem;
         color: $color-light-blue;
         text-decoration: none;
+        @media (min-width: $desktop-width) {
+            font-size: 1.8rem;    
+        }
     }
     &__email {
         display: inline-block;
@@ -49,26 +73,106 @@
         font-size: 1.6rem;
         color: $color-light-blue;
         text-decoration: none;
+        @media (min-width: $desktop-width) {
+            font-size: 1.8rem;    
+        }
     }
 }
 
 /* Hero Section */
 .heroContainer {
+    @media (min-width: $desktop-width) {
+        flex: 3;
+        padding-right: 5.6rem;
+    }
     &__titleH1 {
         font-size: 3.2rem;
         line-height: 1.2em;
         font-weight: $font-weight-extra-bold;
         color: $color-white;
+        @media (min-width: $desktop-width) {
+            font-size: 4.2rem;
+        }
     }
     &__text {
         margin-top: 2.4rem;
         font-weight: $font-weight-bold;
         color: $color-white;
+        @media (min-width: $desktop-width) {
+            font-size: 1.8rem;
+            line-height: 1.5em;
+        }
     }
 }
 
 .primary-btn-contr {
     margin-top: 2.4rem;
+}
+
+/* Stats */
+.stats {
+    text-align: center;
+    padding-bottom: 4.8rem;
+    @include dropshadow (0.15);
+    @media (min-width: $desktop-width) {
+        display: flex;
+        position: absolute;
+        top: -60px;
+        left: 0;
+        width: 100%;
+        padding: 2.4rem 1.2rem;
+        background-color: $color-white;
+        border-radius: 2px;
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2.4rem;
+        @media (min-width: $desktop-width) {
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            padding: 0 1.2rem;
+            &:nth-of-type(1) {
+                flex: 1;
+            }
+            &:nth-of-type(2) {
+                flex: 2;
+            }
+            &:nth-of-type(3) {
+                flex: 2;
+            }
+        }
+        &:nth-of-type(1) {
+            margin-top: 0;
+        }
+    }
+    &__title {
+        font-size: 2.4rem;
+        color: $color-dark-blue;
+    }
+    &__number {
+        font-size: 3.2rem;
+        font-weight: $font-weight-extra-bold;
+        color: $color-orange;
+        @media (min-width: $desktop-width) {
+            font-size: 4.8rem;
+        }
+    }
+    &__text {
+        margin-top: 1.2rem;
+        font-size: 1.8rem;
+        @media (min-width: $desktop-width) {
+            margin-top: 0;
+            padding: 0 2.4rem 0 1.2rem;
+            text-align: left;
+        }
+        & span {
+            color: $color-orange;
+            font-weight: $font-weight-extra-bold;
+            text-transform: uppercase;
+        }
+    }
 }
 
 /* Benefits */
@@ -79,6 +183,12 @@
     grid-column-gap: 8px;
     grid-row-gap: 32px;
     margin-top: 2.4rem;
+    @media (min-width: $desktop-width) {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-column-gap: 8px;
+        margin-top: 4.8rem;
+    }
 }
 
 .benefits-card {
@@ -87,12 +197,18 @@
     position: relative;
     z-index: 10;
     @include dropshadow (0.5);
+    @media (min-width: $desktop-width) {
+        padding: 2.4rem 1.2rem;
+    }
     &__text {
         font-size: 1.3rem;
         line-height: 1.5em;
         font-weight: $font-weight-extra-bold;
         color: $color-white;
         text-align: center;
+        @media (min-width: $desktop-width) {
+            font-size: 1.6rem;
+        }
     }
 }
 
@@ -104,6 +220,9 @@
     position: absolute;
     top: -12px;
     left: calc((50% - 25%) + 24px);
+    @media (min-width: $desktop-width) {
+        left: calc(100% - (50% + 11px));
+    }
     &::after {
         content: '';
         position: absolute;
@@ -129,6 +248,10 @@
 }
 .details {
     margin-top: 2.4rem;
+    @media (min-width: $desktop-width) {
+        width: 50%;
+        margin: 3.2rem auto 0;
+    }
 }
 
 .detailsItems {
@@ -140,6 +263,10 @@
         line-height: 1.5em;
         font-weight: $font-weight-extra-bold;
         color: $color-white;
+        @media (min-width: $desktop-width) {
+            font-size: 1.8rem;
+            font-weight: $font-weight-bold;  
+        }
         &:nth-of-type(1) {
             margin-top: 0;
         }
@@ -159,17 +286,29 @@
 
 /* Awards */
 .awards-image-container {
+    @media (min-width: $desktop-width) {
+        width: 50%;    
+    }
     &__image {
         display: block;
         width: 200px;
         margin: 0 auto;
+        @media (min-width: $desktop-width) {
+            margin: 0 auto 0 50%;    
+        }
     }
 }
 
 .tab {
     display: none;
     &--active {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        @media (min-width: $desktop-width) {
+            flex-direction: row;
+            align-items: self-start;
+            justify-content: space-between;   
+        }
     }
     /*
     @media (min-width: $width-desktop) {
@@ -185,15 +324,14 @@
     margin-top: 3.2rem;
     margin-bottom: 2.4rem;
     text-align: center;
-    /*
-    @media (min-width: $width-desktop) {
+    @media (min-width: $desktop-width) {
         display: flex;
         flex-direction: row;
         width: 600px;
         margin-left: auto;
+        margin-bottom: 4.8rem;
         margin-right: auto;
     }
-    */
     &__btn {
         width: 100%;
         padding: 1em 0;
@@ -213,17 +351,15 @@
         &:hover {
             color: $color-dark-gray;
         }
-        /*
-        @media (min-width: $width-desktop) {
+        @media (min-width: $desktop-width) {
             border-top: none;
             border-bottom: 1px solid #e1e1e1;
         }
-        */
     }
 }
 
 .tabButton__btn--active {
-    color: $color-orange;
+    color: $color-dark-gray;
     &:after {
         content: "";
         background-color: $color-orange;
@@ -234,11 +370,9 @@
         left: 0;
         right: 0;
         margin: 0 auto;
-        /*
-        @media (min-width: $width-desktop) {
+        @media (min-width: $desktop-width) {
             width: 100%;
         }
-        */
     }
 }
 
@@ -249,14 +383,25 @@
 .tabContent {
     width: 80vw;
     margin: 0 auto;
+    @media (min-width: $desktop-width) {
+        width: 50%;    
+    }
     &__header-h3 {
         font-size: 2.2rem;
         line-height: 1.5em;
         font-weight: $font-weight-bold;
         color: $color-dark-blue;
+        text-align: center;
+        @media (min-width: $desktop-width) {
+            text-align: left;
+        }
     }
     &__list {
         padding-left: 24px;
+        @media (min-width: $desktop-width) {
+            margin-top: 1.2rem;    
+        }
+        
     }
     &__listItems {
         position: relative;
@@ -265,15 +410,28 @@
         &:nth-of-type(-n+6) {
             display: none;
         }
+        @media (min-width: $desktop-width) {
+            font-weight: $font-weight-bold;
+            &:nth-of-type(-n+6) {
+                display: block;
+            }    
+        }
     }
     &__icon {
         position: absolute;
-        top: 8;
+        top: 8px;
         left: -24px;
         &-check {
             width: 16px;
             height: 16px;
-            fill: $color-orange;
+            fill: $color-teal;
+        }
+        &-star {
+            position: relative;
+            width: 16px;
+            height: 16px;
+            fill: $color-teal;
+           
         }
     }
 }
@@ -286,18 +444,27 @@
     grid-column-gap: 0;
     grid-row-gap: 0;
     margin-top: 2.4rem;
+    @media (min-width: $desktop-width) {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);   
+    }
 }
 
 .card-client {
     &:nth-of-type(n+7) {
         display: none;
     }
+    @media (min-width: $desktop-width) {
+        &:nth-of-type(n+7) {
+            display: block;
+        }    
+    }
     &__image {
         display: block;
-        width: 60%;
+        width: 50%;
         height: auto;
         margin: auto;
-        opacity: 0.5;
+        opacity: 0.3;
     }
 }
 
@@ -308,10 +475,16 @@
 
 .contact-section .sectionHeading__titleH2 {
     color: $color-white;
+    @media (min-width: $desktop-width) {
+        text-align: left;
+    }
 }
 
 .contact-section__left {
-
+    @media (min-width: $desktop-width) {
+        flex: 2;
+        padding: 7.2rem 4.8rem;
+    }
 }
 
 .contactContent {
@@ -333,8 +506,24 @@
             color: $color-white;
         }
         &-info {
+            display: block;
             font-weight: $font-weight-bold;
             color: $color-white;
+            &-address {
+                text-decoration: none;
+                color: $color-white;
+            }
+            &-phone {
+                text-decoration: none;
+                color: $color-white;
+            }
+            &-email {
+                text-decoration: none;
+                color: $color-white;
+            }
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }
@@ -344,6 +533,21 @@
     margin: 4.8rem 0 0 -2.4rem;
     padding: 2.4rem;
     background-color: $color-dark-blue;
+    @media (min-width: $desktop-width) {
+        flex: 3;
+        margin: 0;
+        padding: 7.4rem 4.8rem;
+        &::after {
+            content: '';
+            width: 25vw;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: calc(50% - 50vw);
+            background-color: $color-dark-blue;
+            z-index: -9999;
+        }
+    }
 }
 
 .hubspot-complex-from {
@@ -351,11 +555,63 @@
 }
 
 /* Footer */
-.footerContent {
+.navbar {
+    width: 100%;
     text-align: center;
+}
+
+.navlinks {
+    display: block;
+    @media (min-width: $desktop-width) {
+        display: inline-flex;    
+    }
+    &__link {
+        display: block;
+        padding: 0.8rem 1.2rem;
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: $color-dark-gray;
+        &:hover {
+            color: $color-light-blue;
+        }
+    }
+}
+
+.footerContent {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 2.4rem;
+    border-top: 1px solid #e1e1e1;
+    @media (min-width: $desktop-width) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
     &__text {
         font-size: 1.4rem;
         color: #aaa;
+        text-align: center;
+        @media (min-width: $desktop-width) {
+            flex: 4;
+            text-align: left;
+        }
+    }
+    &__social {
+        display: flex;
+        justify-content: space-between;
+        width: 200px;
+        margin: 0 auto;
+        padding: 2.4rem 0;
+        @media (min-width: $desktop-width) {
+            flex: 1;
+            margin: 0;
+        }
+    }
+    &__social-icons {
+        fill: $color-dark-gray;
+        &:hover {
+            fill: $color-light-blue;
+        }
     }
 }
 
@@ -364,6 +620,7 @@
     display: inline-block;
     padding: 16px 32px;
     position: relative;
+    border: none;
     border-radius: 50px;
     background: $color-orange;
     color: #fff;
@@ -399,6 +656,11 @@
     border-radius: 3px;
     background-color: $color-white;
     @include dropshadow (0.5);
+    @media (min-width: $desktop-width) {
+        flex: 2;
+        position: relative;
+        padding: 2.4rem;
+    }
 }
 
 .simple-form-title {
@@ -407,6 +669,9 @@
     line-height: 1.5em;
     font-weight: $font-weight-bold;
     text-align: center;
+    @media (min-width: $desktop-width) {
+        margin-bottom: 2.4rem;
+    }
 }
 
 .hubspot-form-top {
