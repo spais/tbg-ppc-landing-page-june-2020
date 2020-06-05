@@ -117,7 +117,7 @@
     @media (min-width: $desktop-width) {
         display: flex;
         position: absolute;
-        top: -60px;
+        top: -50px;
         left: 0;
         width: 100%;
         padding: 2.4rem 1.2rem;
@@ -157,6 +157,7 @@
         color: $color-orange;
         @media (min-width: $desktop-width) {
             font-size: 4.8rem;
+            display: inline-flex;
         }
     }
     &__text {
@@ -646,6 +647,7 @@
         &::after {
             left: 0%;
             transform: translateX(0%);
+            cursor: default;
         }
     }
 }
